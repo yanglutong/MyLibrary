@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/mPopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/mCloseIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/add_cart_pop_close" />
+
+        <ImageView
+            android:id="@+id/mGoodsIconIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/mGoodsCodeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/mGoodsIconIv"
+            android:layout_toRightOf="@id/mGoodsIconIv"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mGoodsPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mGoodsCodeTv"
+            android:layout_alignLeft="@id/mGoodsCodeTv"
+            android:layout_marginBottom="5dp"
+            android:textColor="#f11919" />
+
+        <View
+            android:id="@+id/mDividerView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/mGoodsIconIv"
+            android:background="#666666" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mSkuView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_below="@id/mDividerView"
+        android:layout_margin="10dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sku_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/mSkuView"
+        android:layout_below="@id/mSkuView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:text="数量"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <ren.qinc.numberbutton.NumberButton
+            android:id="@+id/mSkuCountBtn"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            zhy:editable="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mAddCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_sku_amount"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        android:background="#f11919"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="加入购物车"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,4 @@
+include ':myutils'
+include ':sutils'
+include ':app'
+rootProject.name = "Application"
